@@ -1,6 +1,6 @@
 # GitBook-Android
 
-Coding with Kotlin,dagger2,RxJava,RxAndroid,Retrofit,Picasso,MVP,Material Design
+Coding with Kotlin,dagger2,RxJava,RxKotlin,RxAndroid,Retrofit,Picasso,MVP,Material Design
 
 [GitBook 简明教程](http://www.chengweiyang.cn/gitbook/)
 
