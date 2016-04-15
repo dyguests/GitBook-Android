@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import com.fanhl.gitbook.App
 
 /**
+ * Base Activity
  * Created by fanhl on 16/4/14.
  */
 open class BaseActivity : AppCompatActivity() {

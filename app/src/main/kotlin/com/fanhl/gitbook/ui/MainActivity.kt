@@ -13,6 +13,9 @@ import com.fanhl.gitbook.ui.common.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
+/**
+ * MainActivity
+ */
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
     val TAG = MainActivity::class.java.name
 
@@ -30,6 +33,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
+        refreshData()
     }
 
     override fun onBackPressed() {
@@ -81,5 +86,15 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    /**
+     * fixme delete later
+     */
+    private fun refreshData() {
+        app.oauthService.authorize().subscribe (
+                {
+
+                }, {}, {})
     }
 }
