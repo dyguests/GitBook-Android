@@ -5,6 +5,7 @@ import dagger.Component
 import javax.inject.Singleton
 
 /**
+ * AppComponent
  * Created by fanhl on 16/4/14.
  */
 @Singleton

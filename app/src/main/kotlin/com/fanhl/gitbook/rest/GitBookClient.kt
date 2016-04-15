@@ -1,11 +1,12 @@
 package com.fanhl.gitbook.rest
 
-import com.fanhl.gitbook.Constants
+import com.fanhl.gitbook.constants.Constants
 import retrofit.GsonConverterFactory
 import retrofit.Retrofit
 import retrofit.RxJavaCallAdapterFactory
 
 /**
+ * GitBook Retrofit Client
  * Created by fanhl on 16/4/14.
  */
 class GitBookClient {

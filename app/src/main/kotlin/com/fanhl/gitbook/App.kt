@@ -3,6 +3,7 @@ package com.fanhl.gitbook
 import android.app.Application
 
 /**
+ * Base Application
  * Created by fanhl on 16/4/14.
  */
 class App : Application() {
