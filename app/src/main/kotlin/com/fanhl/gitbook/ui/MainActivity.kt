@@ -6,12 +6,15 @@ import android.support.design.widget.Snackbar
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.widget.Toolbar
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import com.fanhl.gitbook.R
 import com.fanhl.gitbook.ui.common.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import rx.android.schedulers.AndroidSchedulers
+import rx.schedulers.Schedulers
 
 /**
  * MainActivity
@@ -92,9 +95,16 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
      * fixme delete later
      */
     private fun refreshData() {
-        app.oauthService.authorize().subscribe (
-                {
-
-                }, {}, {})
+        app.oauthService.authorize()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe (
+                        { Log.d(TAG, "onNext $it") },
+                        {
+                            Log.e(TAG, "onError", it)
+                        },
+                        {
+                            Log.d(TAG, "onComplete")
+                        })
     }
 }

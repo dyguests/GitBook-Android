@@ -12,9 +12,9 @@ import retrofit.RxJavaCallAdapterFactory
 class GitBookClient {
     val retrofit by lazy {
         Retrofit.Builder()
+                .baseUrl(Constants.BASE_URL)
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl(Constants.BASE_URL)
                 .build()
     }
 }
