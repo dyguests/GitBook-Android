@@ -10,11 +10,13 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import com.fanhl.gitbook.R
+import com.fanhl.gitbook.rest.services.OauthService
 import com.fanhl.gitbook.ui.common.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
+import javax.inject.Inject
 
 /**
  * MainActivity
@@ -22,9 +24,14 @@ import rx.schedulers.Schedulers
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
     val TAG = MainActivity::class.java.name
 
+    @Inject
+    lateinit var oauthService: OauthService
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        component.inject(this)
+
         val toolbar = findViewById(R.id.toolbar) as Toolbar?
         setSupportActionBar(toolbar)
 
@@ -95,7 +102,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
      * fixme delete later
      */
     private fun refreshData() {
-        app.oauthService.authorize()
+        oauthService.authorize()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe (

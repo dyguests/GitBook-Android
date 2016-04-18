@@ -9,5 +9,5 @@ import com.fanhl.gitbook.App
  */
 open class BaseActivity : AppCompatActivity() {
     val app by lazy { application as App }
-    val graph by lazy { app.graph }
+    val component by lazy { app.graph }
 }
