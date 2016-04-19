@@ -6,16 +6,17 @@ Coding with:
 
 2.dagger2   OK
 
-3.Retrofit  50%
+3.Retrofit  OK
 
 4.MVP
 
-5.RxJava,RxKotlin,RxAndroid
+5.RxJava,RxKotlin,RxAndroid     OK
 
 6.Material Design
 
 7.Picasso
 
+8.EventBus  
 
 [GitBook 简明教程](http://www.chengweiyang.cn/gitbook/)
 
