@@ -8,6 +8,6 @@ import rx.Observable
  * Created by fanhl on 16/4/15.
  */
 interface OauthService {
-    @GET("/authorize?response_type=code&redirect_uri=https://github.com/dyguests/GitBook-Android&client_id=57103a47f9786b100031cc05")
+    @GET("/oauth/authorize?response_type=code&redirect_uri=https://github.com/dyguests/GitBook-Android&client_id=57103a47f9786b100031cc05")
     fun authorize(): Observable<ResponseBody>
 }

@@ -1,6 +1,7 @@
 package com.fanhl.gitbook.rest
 
 import com.fanhl.gitbook.constants.Constants
+import com.fanhl.gitbook.rest.services.BookService
 import com.fanhl.gitbook.rest.services.OauthService
 import dagger.Module
 import dagger.Provides
@@ -27,4 +28,5 @@ class RestModule {
             .build()
 
     @Singleton @Provides fun provideOauthService(retrofit: Retrofit) = retrofit.create(OauthService::class.java)
+    @Singleton @Provides fun provideBookService(retrofit: Retrofit) = retrofit.create(BookService::class.java)
 }
