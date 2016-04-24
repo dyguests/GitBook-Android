@@ -1,5 +1,15 @@
 # GitBook-Android
 
+# Reference
+
+Oauth see:[Arkar-Aung/gitbook](https://github.com/Arkar-Aung/gitbook)
+
+[GitBook 简明教程](http://www.chengweiyang.cn/gitbook/)
+
+[GIT教學](https://www.gitbook.com/book/kingofamani/git-teach/details)
+
+# Use
+
 Coding with:
 
 1.Kotlin    OK
@@ -18,6 +28,4 @@ Coding with:
 
 8.EventBus  
 
-[GitBook 简明教程](http://www.chengweiyang.cn/gitbook/)
 
-[GIT教學](https://www.gitbook.com/book/kingofamani/git-teach/details)
